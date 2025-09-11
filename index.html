@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day1.css">
+</head>
+<body>
+    <div class="contain"> 
+        <img src="scenery 1.jpg" alt="general image">
+    </div>
+    <div class="contain1">
+            <img id = "imgid"src="#" alt="like">
+            <p id ="count">count</p>
+            <div class="likebut">
+            <button onclick="fun(),dis()"> Like</button>
+            <button onclick="dic(),disl()">Dislike</button>
+
+            </div>
+       <script>
+                var Like = document.getElementById("imgid");
+                Like.src ="like image.png";
+                var x =0;
+                function fun()
+                {
+                    x++;
+                    x=document.getElementById("count").innerHTML  =x;
+                }
+                function dis()
+                {   
+                Like.src = "li.png"                 
+                }
+                function dic()
+                {
+                    if (x>=1) 
+                    {
+                        x--;
+                        x=document.getElementById("count").innerHTML=x;
+                    }
+                    else
+                    {
+                        x=document.getElementById("count").innerHTML=x;
+                    }                       
+                }
+                function disl()
+                {
+                    if (x>=1) 
+                    {
+                        Like.src= "li.png" 
+                    }                    
+                    else
+                    {
+                        Like.src="like image.png"
+                    }
+                }
+
+       </script>
+    </div>
+</body>
+</html>
